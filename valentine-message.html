@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You 💖</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .message-box {
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.3em;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .hearts {
+            position: absolute;
+            font-size: 24px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="message-box">
+    <h1>I Love You, Vyom 💕</h1>
+    <p>
+        Thank you for saying yes, my love. 💖
+From the moment you came into my life, everything started feeling brighter, softer, and more beautiful. You are not just my Valentine, you are my comfort, my happiness, and the reason behind my smiles.
+
+Every moment with you feels like a dream I never want to wake up from. Your presence makes my heart feel safe, your voice calms my thoughts, and your love makes my world complete.
+
+I don’t just want you for today… I want you for every tomorrow.
+<p>Happy Valentine’s Day, my Vyom. I love you more than words can ever express. 💕</p>
+</div>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "hearts";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
